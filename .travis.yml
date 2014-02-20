@@ -5,6 +5,7 @@ install:
   - echo exit 101 | sudo tee /usr/sbin/policy-rc.d
   - sudo chmod +x /usr/sbin/policy-rc.d
   - sudo apt-get install -qy slirp lxc lxc-docker
+  - sudo /etc/init.d/docker start
 script:
   - IMAGE_ID=$(sudo docker build .)
   - sudo docker run -i -t $IMAGE_ID php -v
