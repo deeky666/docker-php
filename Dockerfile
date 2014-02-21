@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:7.3
 
 MAINTAINER Steve Müller "st.mueller@dzh-online.de"
 
